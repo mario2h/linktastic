@@ -11,3 +11,13 @@
 /log/*
 !/log/.keep
 /tmp
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+*.ink
