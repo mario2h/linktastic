@@ -11,8 +11,6 @@ Aplicación clon de [*Hacker News*](http://news.ycombinator.com/), que permite p
 - Crear notificaciones
 - Añadir buscador de artículos
 - Inicio de sesión con facebook
-- Instalar Bootstrap
-- Instalar Font-Awesome
 
 ## Modelo
 
