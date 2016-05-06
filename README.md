@@ -6,7 +6,6 @@ Aplicación clon de [*Hacker News*](http://news.ycombinator.com/), que permite p
 
 ## Pendiente
 
-- Añadir autentificación de usuarios
 - Añadir autorización de usuarios
 - Crear notificaciones
 - Añadir buscador de artículos
