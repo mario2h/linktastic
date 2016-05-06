@@ -14,6 +14,9 @@ gem 'jbuilder', '~> 2.0'
 # Authentication Gems (gemas de autentificación)
 gem 'devise', '~> 4.1'
 
+# Front-end Gems
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
+
 # Doc gems (gemas de documentación)
 group :doc do
   gem 'sdoc', '~> 0.4.0'
