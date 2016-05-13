@@ -2,7 +2,6 @@
   <% if @article.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@article.errors.count, "error") %> prohibited this article from being saved:</h2>
-
       <ul>
       <% @article.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -10,16 +9,15 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+  <div class="form-group">
+    <%= f.label :title, 'Título' %>
+    <%= f.text_field :title, class: 'form-control input-lg', autofocus: true %>
   </div>
-  <div class="field">
-    <%= f.label :url %><br>
-    <%= f.text_field :url %>
+  <div class="form-group">
+    <%= f.label :url, 'URL' %>
+    <%= f.text_field :url, class: 'form-control input-lg' %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-group">
+    <%= f.submit 'Guardar', class: 'btn btn-primary btn-lg btn-block' %>
   </div>
 <% end %>
