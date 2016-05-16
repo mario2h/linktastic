@@ -7,6 +7,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
+    redirect_to @article.url
   end
 
   def new
@@ -22,7 +23,7 @@ class ArticlesController < ApplicationController
     @article.user = current_user
 
     if @article.save
-      redirect_to @article, notice: 'Article was successfully created.'
+      redirect_to articles_url, notice: 'Article was successfully created.'
     else
       render :new
     end
@@ -30,7 +31,7 @@ class ArticlesController < ApplicationController
 
   def update
     if @article.update(article_params)
-      redirect_to @article, notice: 'Article was successfully updated.'
+      redirect_to articles_url, notice: 'Article was successfully updated.'
     else
       render :edit
     end

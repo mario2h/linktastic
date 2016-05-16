@@ -48,6 +48,21 @@ html {
       .no-article {
         padding-top: 45px;
       }
+      .btn-facebook {
+        background-color: #3b5998;
+        border-color: rgba(0, 0, 0, 0.2);
+        &:hover {
+          background-color: #2d4373;
+          border-color: rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
+    .popover {
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      .popover-title {
+        text-align: center;
+      }
     }
     #table-article {
       margin-top: -20px;
@@ -62,6 +77,9 @@ html {
         }
       }
       .like-box {
+        width: 50px;
+      }
+      .like {
         padding: 25%;
       }
       svg {

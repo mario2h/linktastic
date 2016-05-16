@@ -6,7 +6,7 @@
   </td>
   <td class="text-left">
     <p>
-      <b><%= link_to article.title, article %></b>
+      <b><%= link_to article.title, article, target: "_blank" %></b>
       <small class="text-muted">
         <!-- URL -->
       </small>
@@ -19,12 +19,15 @@
       <%= distance_of_time_in_words(Time.now, article.created_at) %>
     </p>
   </td>
-  <td class="text-right">
-    <ul class="list-inline">
-      <% if user_signed_in? && article.user == current_user %>
-        <td><%= link_to "Editar", edit_article_path(article) %></td>
-        <td><%= link_to "Eliminar", article, method: :delete, data: { confirm: "¿Estas seguro?" } %></td>
-      <% end %>
-    </ul>
-  </td>
+  <% if user_signed_in? && article.user == current_user %>
+    <td class="text-right">
+      <ul class="list-inline">
+        <li>
+          <%= link_to "#", data: { toggle: "popover", content: "#{ render 'articles/partials/popover', article: article }" } do %>
+            <%= fa_icon "ellipsis-v" %>
+          <% end %>
+        </li>
+      </ul>
+    </td>
+  <% end %>  
 </tr>

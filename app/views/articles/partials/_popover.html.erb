@@ -1,0 +1,4 @@
+<ul class="list-inline">
+  <li><%= link_to(fa_icon("pencil", text: "Editar"), edit_article_path(article)) %></li>
+  <li><%= link_to(fa_icon("times", text: "Eliminar"), article, method: :delete, data: { confirm: "¿Estas seguro?" }) %></li>
+</ul>
