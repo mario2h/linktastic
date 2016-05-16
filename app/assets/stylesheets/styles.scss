@@ -1,0 +1,107 @@
+html {
+  -webkit-text-size: 100%;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  position: relative;
+  min-height: 100%;
+  body {
+    padding-top: 40px;
+    margin-bottom: 60px;
+    #navbar {
+      margin-top: -2px;
+      .search-form {
+        font-size: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-top: 2px;
+        border-radius: 21px;
+        height: 30px;
+        width: 100%;
+        padding: 0px 12px 0px 12px;
+      }
+      .btn-publish {
+        background-color: #1698eb;
+        padding: 8px 15px;
+        margin: 7px 5px 0 5px;
+        color: #fcfcfc;
+        border-radius: 6px;
+        text-align: center;
+        &:hover {
+          background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+        }
+      }
+    }
+    .container, .container-fluid {
+      .page-header {
+        border-bottom: transparent;
+        h1 {
+          font-size:20px;
+          font-weight: 600;
+          padding-bottom: 5px;
+          margin-bottom: -10px;
+        }
+        .article-list-title {
+          border-bottom: 3px solid #007bff;
+          width: 140px;
+        }
+      }
+      .no-article {
+        padding-top: 45px;
+      }
+    }
+    #table-article {
+      margin-top: -20px;
+      .dropdown-menu {
+        min-width: 60px;
+      }
+      .fa-ellipsis-v {
+        color: #dddddd;
+        font-size: 18px;
+        &:hover {
+          color: #9c9c9c;
+        }
+      }
+      .like-box {
+        padding: 25%;
+      }
+      svg {
+        transition: transform 100ms ease-out;
+        path {
+          fill: #333333;
+          color: #333333;
+          &:hover {
+            fill: #007bff;
+            color: #007bff;
+          }
+        }
+        &:hover {
+          transform: scale(1.35);
+        }
+      }
+      tr {
+        border: 1px solid #eeeeee;
+      }
+      td {
+        border-top: none;
+        border-bottom: 1px solid #eeeeee;
+        p {
+          margin-bottom: 0px;
+        }
+      }
+    }
+    footer {
+      &.footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        min-height: 60px;
+        li {
+          padding-top: 20px;
+          .fa-heart {
+            color: rgb(214, 73, 77)
+          }
+        }
+      }
+    }
+  }
+}

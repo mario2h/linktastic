@@ -1,0 +1,30 @@
+<tr class="active">
+  <td class="text-center like-box">
+    <div class="like">
+      <!--VOTE-->
+    </div>
+  </td>
+  <td class="text-left">
+    <p>
+      <b><%= link_to article.title, article %></b>
+      <small class="text-muted">
+        <!-- URL -->
+      </small>
+      <br>
+      <!-- TOTAL VOTES --> votos
+      <!-- QUIENES VOTARON -->
+      &middot;
+      por
+      <%= article.user.full_name %>
+      <%= distance_of_time_in_words(Time.now, article.created_at) %>
+    </p>
+  </td>
+  <td class="text-right">
+    <ul class="list-inline">
+      <% if user_signed_in? && article.user == current_user %>
+        <td><%= link_to "Editar", edit_article_path(article) %></td>
+        <td><%= link_to "Eliminar", article, method: :delete, data: { confirm: "¿Estas seguro?" } %></td>
+      <% end %>
+    </ul>
+  </td>
+</tr>
