@@ -5,6 +5,7 @@ $ ->
     placement: 'bottom'
   return
 
+$ ->
   $('[data-toggle="tooltip"]').tooltip
     trigger: 'hover'
   return
