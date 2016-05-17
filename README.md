@@ -6,8 +6,7 @@ Aplicación clon de [*Hacker News*](http://news.ycombinator.com/), que permite p
 
 ## Reglas
 
-- Ordenar de más nuevo a más viejo.
-- Priorizar el orden por cantidad de votos.
+- Limitar artículos a 24 por página
 
 ## Pendiente
 
@@ -26,3 +25,8 @@ User
 Article
 ```ruby
 :article belongs_to :user
+```
+
+## Extras
+
+TODO: Escribir extras

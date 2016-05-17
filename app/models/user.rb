@@ -6,6 +6,8 @@ class User < ActiveRecord::Base
 
   has_many :articles
 
+  acts_as_voter
+  
   def full_name
     "#{ self.name } #{ self.lastname }"
   end

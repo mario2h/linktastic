@@ -43,6 +43,20 @@ class ArticlesController < ApplicationController
     redirect_to articles_url, notice: 'Article was successfully destroyed.'
   end
 
+  def upvote
+    @articles = Article.find(params[:id])
+    @articles.liked_by current_user
+
+    redirect_to articles_url
+  end
+
+  def downvote
+    @articles = Article.find(params[:id])
+    @articles.disliked_by current_user
+
+    redirect_to articles_url
+  end
+
   private
 
     def set_article

@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :articles
-  root to: 'articles#index' 
+  resources :articles do
+    member do
+      put 'like', to: 'articles#upvote'
+      put 'dislike', to: 'articles#downvote'
+    end
+  end
+  root to: 'articles#index'
 end

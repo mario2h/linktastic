@@ -14,6 +14,9 @@ gem 'jbuilder', '~> 2.0'
 # Authentication Gems (gemas de autentificación)
 gem 'devise', '~> 4.1'
 
+# Internationalization Gem
+gem 'devise-i18n', '~> 1.0', '>= 1.0.1'
+
 # Front-end Gems
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'font-awesome-rails', '~> 4.6', '>= 4.6.2.0'
@@ -21,6 +24,9 @@ gem 'animate-rails', '~> 1.0', '>= 1.0.10'
 
 # jQuery-Turbolinks Gem
 gem 'jquery-turbolinks', '~> 2.1'
+
+#Voting Gem
+gem 'acts_as_votable', '~> 0.10.0'
 
 # Doc gems (gemas de documentación)
 group :doc do

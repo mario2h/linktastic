@@ -17,7 +17,7 @@
       <% else %>
         <table id="table-article" class="table table-hover table-condensed table-responsive">
           <tbody>
-            <% @articles.each do |article| %>
+            <% @articles.order(cached_votes_up: :desc, created_at: :desc).each do |article| %>
               <%= render "articles/partials/table_row", article: article %>
             <% end %>
           </tbody>

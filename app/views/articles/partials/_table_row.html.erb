@@ -1,17 +1,31 @@
 <tr class="active">
   <td class="text-center like-box">
     <div class="like">
-      <!--VOTE-->
+      <% if user_signed_in? && current_user.liked?(article) %>
+        <%= link_to dislike_article_path(article), method: :put do %>
+          <svg width="9" height="8" viewBox="0 0 9 8" xmls="http://www.w3.org/2000/svg">
+            <title>Quitar voto</title>
+            <path d="m4.53785,8h-9l4,-8l4.5,8z" fill-rule="evenodd" transform="rotate(-180 2.2878487110137944,4)">
+          </svg>
+          <% end %>
+      <%else%>
+        <%= link_to like_article_path(article), method: :put do %>
+        <svg width="9" height="8" viewBox="0 0 9 8" xmls="http://www.w3.org/2000/svg">
+          <title>Quitar voto</title>
+          <path d="M9 8H0l4.5-8L9 8z" fill-rule="evenodd">
+        </svg>
+        <% end %>
+      <% end %>
     </div>
   </td>
   <td class="text-left">
     <p>
       <b><%= link_to article.title, article, target: "_blank" %></b>
       <small class="text-muted">
-        <!-- URL -->
+        (<%= URI.parse(article.url).host %>)
       </small>
       <br>
-      <!-- TOTAL VOTES --> votos
+      <%= article.score %> votos
       <!-- QUIENES VOTARON -->
       &middot;
       por
@@ -29,5 +43,5 @@
         </li>
       </ul>
     </td>
-  <% end %>  
+  <% end %>
 </tr>
