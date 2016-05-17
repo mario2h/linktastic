@@ -33,14 +33,14 @@
       <%= distance_of_time_in_words(Time.now, article.created_at) %>
     </p>
   </td>
-  <% if user_signed_in? && article.user == current_user %>
     <td class="text-right">
       <ul class="list-inline">
-        <li>
-          <%= link_to "#", data: { toggle: "popover", content: "#{ render 'articles/partials/popover', article: article }" } do %>
-            <%= fa_icon "ellipsis-v" %>
-          <% end %>
-        </li>
+        <% if user_signed_in? && article.user == current_user %>
+          <li>
+            <%= link_to "#", data: { toggle: "popover", content: "#{ render 'articles/partials/popover', article: article }" } do %>
+              <%= fa_icon "ellipsis-v" %>
+            <% end %>
+          </li>
       </ul>
     </td>
   <% end %>
